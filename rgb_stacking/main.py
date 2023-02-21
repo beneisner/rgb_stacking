@@ -16,6 +16,7 @@
 """Script to run a viewer to visualize the rgb stacking environment."""
 
 from typing import Sequence
+from importlib_resources import files
 
 from absl import app
 from absl import flags
@@ -36,7 +37,7 @@ _ALL_OBJECT_TRIPLETS = _TEST_OBJECT_TRIPLETS + (
     'rgb_test_random',
     )
 
-_POLICY_DIR = ('assets/saved_models')
+_POLICY_DIR = files('rgb_stacking_assets').joinpath('saved_models')
 
 _POLICY_PATHS = {
     k: f'{_POLICY_DIR}/mpo_state_{k}' for k in _TEST_OBJECT_TRIPLETS

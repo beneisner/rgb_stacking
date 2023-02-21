@@ -1,7 +1,10 @@
-dm-control == 0.0.364896371
+# dm-control == 0.0.364896371
+dm-control >= 1.0.0
 dm-robotics-moma == 0.0.4
 dm-robotics-manipulation == 0.0.4
-tensorflow == 2.7.0.rc0
+tensorflow == 2.7.0
 dm-reverb-nightly == 0.5.0.dev20211104
 opencv-python >= 3.4.0
 typing-extensions >= 3.7.4
+protobuf < 3.21.0
+importlib-resources

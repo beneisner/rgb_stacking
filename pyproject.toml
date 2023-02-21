@@ -1,0 +1,23 @@
+[project]
+name = "rgb_stacking"
+version = "0.0.1"
+dynamic = ["dependencies"]
+requires-python = "~=3.8"
+
+[build-system]
+requires = [
+  "setuptools >= 62.3.2",
+  "setuptools-scm",
+  "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rgb_stacking", "rgb_stacking_assets"]
+package-dir = {rgb_stacking = "rgb_stacking", rgb_stacking_assets = "assets"}
+
+[tool.setuptools.package-data]
+rgb_stacking_assets = ["*"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
