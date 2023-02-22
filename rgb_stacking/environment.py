@@ -189,12 +189,12 @@ def rgb_stacking(
       observation_transforms.DowncastFloatPreprocessor(np.float32))
 
   # Concatenate the TCP and wrist site observations.
-  env_builder.add_preprocessor(observation_transforms.MergeObservations(
-      obs_to_merge=['robot0_tcp_pos', 'robot0_tcp_quat'],
-      new_obs='robot0_tcp_pose'))
-  env_builder.add_preprocessor(observation_transforms.MergeObservations(
-      obs_to_merge=['robot0_wrist_site_pos', 'robot0_wrist_site_quat'],
-      new_obs='robot0_wrist_site_pose'))
+  # env_builder.add_preprocessor(observation_transforms.MergeObservations(
+  #     obs_to_merge=['robot0_tcp_pos', 'robot0_tcp_quat'],
+  #     new_obs='robot0_tcp_pose'))
+  # env_builder.add_preprocessor(observation_transforms.MergeObservations(
+  #     obs_to_merge=['robot0_wrist_site_pos', 'robot0_wrist_site_quat'],
+  #     new_obs='robot0_wrist_site_pose'))
 
   # Add in observations to measure the distance from the TCP to the objects.
   for color in ('red', 'green', 'blue'):
